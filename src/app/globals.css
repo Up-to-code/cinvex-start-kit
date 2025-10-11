@@ -1,8 +1,70 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "emailly";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Base colors - cream/beige backgrounds */
+  --color-base-100: oklch(96% 0.015 60);
+  --color-base-200: oklch(93% 0.02 60);
+  --color-base-300: oklch(90% 0.025 60);
+  --color-base-content: oklch(30% 0.02 240);
+
+  /* Primary - Teal/Turquoise */
+  --color-primary: oklch(65% 0.12 200);
+  --color-primary-content: oklch(98% 0.01 200);
+
+  /* Secondary - Coral/Orange */
+  --color-secondary: oklch(72% 0.15 50);
+  --color-secondary-content: oklch(98% 0.01 50);
+
+  /* Accent - Peach */
+  --color-accent: oklch(80% 0.1 70);
+  --color-accent-content: oklch(25% 0.02 70);
+
+  /* Neutral - Dark slate */
+  --color-neutral: oklch(40% 0.03 240);
+  --color-neutral-content: oklch(98% 0.01 240);
+
+  /* Info - Teal variant */
+  --color-info: oklch(60% 0.15 210);
+  --color-info-content: oklch(98% 0.01 210);
+
+  /* Success - Green */
+  --color-success: oklch(65% 0.2 140);
+  --color-success-content: oklch(98% 0.01 140);
+
+  /* Warning - Orange */
+  --color-warning: oklch(75% 0.18 60);
+  --color-warning-content: oklch(25% 0.02 60);
+
+  /* Error - Red */
+  --color-error: oklch(60% 0.25 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  /* Border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+
+  /* Base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Border size */
+  --border: 1px;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(96% 0.015 60);
+  --foreground: oklch(30% 0.02 240);
 }
 
 @theme inline {
@@ -10,13 +72,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
